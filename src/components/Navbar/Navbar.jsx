@@ -4,10 +4,8 @@ import logo from "../../assets/logo.png";
 import arrow_icon from "../../assets/arrow_icon.png";
 import { CoinContext } from "../../context/CoinContext";
 
-
 const Navbar = () => {
-
-  const {setCurrency} = useContext(CoinContext);
+  const { setCurrency } = useContext(CoinContext);
 
   const currencyHandler = (e) => {
     switch (e.target.value) {
@@ -40,19 +38,14 @@ const Navbar = () => {
           name: "usd",
           symbol: "$",
         });
+    }
+  };
 
-  }
-
-
-
-  // Navbar component
   return (
     <div className={styles.navbar}>
-      {" "}
       {/* Navbar container */}
       <img src={logo} alt="logo" className={styles.logo} /> {/* Logo */}
       <ul>
-        {" "}
         {/* Navigation links */}
         <li>Home</li>
         <li>Features</li>
