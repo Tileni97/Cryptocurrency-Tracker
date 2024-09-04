@@ -1,0 +1,110 @@
+.navbar{ /* Navbar */
+    display: flex; /* Display flex */
+    align-items: center; /* Align items center */
+    justify-content: space-between; /* Justify content space between */
+    padding: 20px 10%; /* Padding 20px 10% */
+    color: #E0FFFF; /* Color #E0FFFF */
+    border-bottom: 2px solid rgba(60, 60, 60, 0.3); /* Border bottom space 2px solid rgba(60, 60, 60, 0.3) */
+    background: rgba(10, 14, 46, 0.7); /* Background rgba(10, 14, 46, 0.7) */
+    backdrop-filter: blur(10px); /* Backdrop filter blur 10px */
+}
+.navbar .logo{ /* Navbar logo */
+    width: max(12vw, 120px); /* Width set to max(12vw, 120px) */
+    filter: drop-shadow(0 0 5px #00FFFF); /* Filter drop shadow 0 0 5px #00FFFF */
+}
+.navbar ul{ /* Navbar ul- stands for unordered list */
+    display: flex; /* Display flex */
+    gap: 40px; /* Gap 40px */
+    list-style: none;   
+}
+.navbar li{ /* Navbar li- stands for list item */
+    cursor: pointer; /* Cursor pointer */
+    position: relative; /* Position relative */
+    transition: color 0.3s ease; /* Transition color is for the duration of 0.3s ease */
+}
+
+.navbar li:hover {
+    color: #00FFFF;
+}
+.navbar li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00FFFF;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar li:hover::after {
+    transform: scaleX(1);
+}
+.navRight{
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between the elements */
+}
+.navbar select{
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 2px solid #00FFFF;
+    background: rgba(10, 14, 46, 0.5);
+    color: #E0FFFF;
+    transition: all 0.3s ease;
+
+}
+.navbar select:hover {
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+.navbar option{
+    background-color: #0A0E2E;
+    color: #E0FFFF;
+}
+.navbar button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0A0E2E;
+    background: linear-gradient(90deg, #00FFFF, #FF00FF);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navbar button:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.navbar button img{
+    width: 13px;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 900px){
+    .navbar{
+        padding: 20px 8%;
+    }
+    .navbar button{
+        gap: 8px;
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px){
+    .navbar{
+        padding: 20px 5%;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .navbar button img{
+        width: 12px;
+    }
+}

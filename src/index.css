@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* { /* Apply to all elements */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    font-family: "Outfit", sans-serif; /* Use custom font */
+}
+
+a { /* Apply to all links */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit parent color */
+}
+
+.app {
+    min-height: 100vh;
+    color: #E0FFFF; /* Light Cyan for text */
+    background: linear-gradient(135deg, #0F0529, #1E0F3C, #2E1050); /* Gradient background */
+    background-size: 300% 300%; /* Background size */
+    animation: gradientShift 15s ease infinite; /* Animate gradient */
+}
+
+@keyframes gradientShift { /* Animate gradient */
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* End position */
+    }
+    100% {
+        background-position: 0% 50%; /* Start position */
+    }
+}
+
+
