@@ -16,16 +16,10 @@ const Navbar = () => {
           symbol: "$",
         });
         break;
-      case "nad":
-        setCurrency({
-          name: "nad",
-          symbol: "N$",
-        });
-        break;
       case "zar":
         setCurrency({
           name: "zar",
-          symbol: "R",
+          symbol: "N$",
         });
         break;
       case "eur":
@@ -61,8 +55,7 @@ const Navbar = () => {
       <div className={styles.navRight}>
         <select onChange={currencyHandler}>
           <option value="usd">USD</option>
-          <option value="nad">NAD</option>
-          <option value="zar">ZAR</option>
+          <option value="zar">NAD</option>
           <option value="eur">EUR</option>
         </select>
         <button>

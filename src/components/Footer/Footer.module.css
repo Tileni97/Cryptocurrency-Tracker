@@ -1,0 +1,52 @@
+.Footer {
+    background-color: #0F0529; /* Dark background color */
+    color: #E0FFFF; /* Light cyan text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px; /* Set a maximum width for the footer content */
+    margin: 0 auto; /* Center the footer container */
+    padding: 20px;
+}
+
+.about, .links, .social {
+    flex: 1; /* Allow each section to take equal space */
+    padding: 0 20px; /* Add some padding around each section */
+}
+
+h4 {
+    margin-bottom: 10px; /* Add space below headings */
+}
+
+p {
+    margin: 0 0 10px; /* Add space below paragraphs */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin: 5px 0; /* Add space between list items */
+}
+
+a {
+    color: #E0FFFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #00F7FF; /* Change link color on hover */
+}
+
+.footerBottom {
+    margin-top: 20px; /* Add space above the copyright text */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a top border */
+    padding-top: 10px; /* Add padding above the copyright text */
+}

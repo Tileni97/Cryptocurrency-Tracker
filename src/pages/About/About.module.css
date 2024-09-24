@@ -1,0 +1,34 @@
+.About {
+    padding: 20px;
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the content */
+    color: #E0FFFF; /* Light cyan text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+h1 {
+    text-align: center; /* Center the main title */
+    margin-bottom: 20px; /* Add space below the title */
+}
+
+h2 {
+    margin-top: 20px; /* Add space above section titles */
+    margin-bottom: 10px; /* Add space below section titles */
+}
+
+.features ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.features li {
+    background: rgba(255, 255, 255, 0.1); /* Light background for list items */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between items */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.callToAction {
+    margin-top: 30px; /* Add space above the call-to-action section */
+    text-align: center; /* Center the call-to-action text */
+}

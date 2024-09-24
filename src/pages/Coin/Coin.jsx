@@ -8,49 +8,55 @@ const Coin = () => {
   const { coinId } = useParams();
   const [coinData, setCoinData] = useState();
   const [historicalData, setHistoricalData] = useState();
-  const { currency, API_KEY } = useContext(CoinContext);
+  const [error, setError] = useState(null); // New error state
+  const { currency } = useContext(CoinContext);
 
-  const API_KEY_COINGECKO = import.meta.env.VITE_COINGECKO_API_KEY;
-  const API_KEY_EXCHANGE = import.meta.env.VITE_EXCHANGE_RATE_API_KEY;
+  // Access the API key from environment variables
+  const API_KEY = import.meta.env.VITE_COINGECKO_API_KEY;
 
-  const fetchCoinData = async (coinId) => {
+  const fetchData = async (endpoint, setter) => {
     const options = {
       method: "GET",
-      headers: {
-        accept: "application/json",
-        "x-cg-demo-api-key": API_KEY_COINGECKO, // Using the Coingecko API key from the environment variable
-      },
+      headers: { accept: "application/json", "x-cg-demo-api-key": API_KEY },
     };
 
     try {
-      const response = await fetch(
-        `https://api.coingecko.com/api/v3/coins/${coinId}`,
-        options
-      );
+      const response = await fetch(endpoint, options);
+      if (!response.ok) {
+        throw new Error("Network response was not ok"); // Handle non-200 responses
+      }
       const data = await response.json();
-      setCoinData(data);
+      setter(data);
     } catch (err) {
-      console.error("Error fetching coin data:", err);
+      console.error(err);
+      setError("Failed to load data. Please try again later."); // Set error message
     }
   };
 
-  const fetchExchangeRate = async () => {
-    try {
-      const response = await fetch(
-        `https://v6.exchangerate-api.com/v6/${API_KEY_EXCHANGE}/latest/USD`
-      ); // Using the Exchange Rate API key from the environment variable
-      const data = await response.json();
-      // Use the exchange rate data as needed
-      console.log(data);
-    } catch (err) {
-      console.error("Error fetching exchange rate:", err);
-    }
-  };
+  useEffect(() => {
+    fetchData(`https://api.coingecko.com/api/v3/coins/${coinId}`, setCoinData);
+    fetchData(
+      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency.name}&days=10&interval=daily`,
+      setHistoricalData
+    );
+  }, [currency, coinId]);
+
+  if (error) {
+    return <div className={Style.error}>{error}</div>; // Display error message
+  }
+
+  if (!coinData || !historicalData) {
+    return (
+      <div className={Style.spinner}>
+        <div className={Style.spin}></div>
+      </div>
+    );
+  }
 
   return (
     <div className={Style.coin}>
       <div className={Style.coinName}>
-        <img src={coinData.image.large} alt={coinData.name} />
+        <img src={coinData.image.large} alt={`Logo of ${coinData.name}`} />
         <p>
           <b>
             {coinData.name} ({coinData.symbol.toUpperCase()})
