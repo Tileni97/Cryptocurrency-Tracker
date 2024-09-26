@@ -3,10 +3,12 @@
 ## Project Overview
 
 CryptoTracker is a dedicated cryptocurrency tracking platform designed specifically for Namibian cryptocurrency enthusiasts. Built with React and utilizing the CoinGecko API, this application provides real-time cryptocurrency data in Namibian Dollars (NAD), eliminating the need for external currency converters.
+<img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/Screenshot%202024-09-25%20210355.pngc?raw=true" alt="CryptoTracker Screenshot 2" width="700"/>
 
 <img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/Screenshot%202024-09-25%20210322.png?raw=true" alt="CryptoTracker Screenshot 2" width="500"/>
 
 <img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/Screenshot%202024-09-25%20210431.png?raw=true" alt="CryptoTracker Screenshot 3" width="500"/>
+
 <img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/Screenshot%202024-09-25%20210454.png?raw=true" alt="CryptoTracker Screenshot 1" width="500"/>
 
 ## Features
