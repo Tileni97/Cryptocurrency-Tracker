@@ -9,6 +9,7 @@ CryptoTracker is a dedicated cryptocurrency tracking platform designed specifica
 <img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/Screenshot%202024-09-25%20210322.png?raw=true" alt="CryptoTracker Screenshot 2" width="700"/>
 
 <img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/crypto2.png" alt="CryptoTracker Screenshot 2" width="700"/>
+<img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/crypto3.png" width="700"/>
 
 <img src="https://github.com/Tileni97/Cryptocurrency-Tracker/blob/Tileni97-patch-1/Screenshot%202024-09-25%20210431.png?raw=true" alt="CryptoTracker Screenshot 3" width="700"/>
 
